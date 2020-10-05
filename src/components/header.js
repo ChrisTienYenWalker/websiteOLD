@@ -1,13 +1,35 @@
-import React from 'react';
+import React, {usestate} from 'react';
 
-function list(props){
-    
-}
-export default function header(){
+function header(){
+
+    const items = [
+        {
+            link: "#",
+            name: "name1"
+        },
+        {
+            link: "#",
+            name: "name2"
+        },
+        
+        {
+            link: "#",
+            name: "name3"
+        }
+    ]
+
+
+    const listItems = items.map((items) => <li><a href={items.link}>{items.name}</a></li>)
+
     return(
         <div>
-            <ul sections="About Projects">{list}</ul>
+            <nav>
+                <ul>
+                    <ul>{listItems}</ul>
+                </ul>
+            </nav>
         </div>
-    );
+    )
 }
 
+export default header;
