@@ -1,14 +1,15 @@
 import React from 'react';
-import Header from './website/header';
-import Body from './website/body';
-import Footer from './website/footer';
+import Header from './components/header';
+import Body from './components/body';
+import Footer from './components/footer';
+import './styles.css'
 
 function website() {
     return (
         <div>
             <Header></Header>
-            <Body></Body>
-            <Footer></Footer>
+             <Body></Body> 
+            {/*<Footer></Footer>*/}
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Website from './website/website';
+import Website from './website';
 
 function App() {
   return (

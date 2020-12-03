@@ -5,16 +5,16 @@ function header(){
     const items = [
         {
             link: "#",
-            name: "name1"
+            name: "About Me"
         },
-        {
-            link: "#",
-            name: "name2"
+        {           
+             name: "Projects",
+            link: "#", 
         },
         
         {
             link: "#",
-            name: "name3"
+            name: "Contacts"
         }
     ]
 
@@ -22,11 +22,9 @@ function header(){
     const listItems = items.map((items) => <li><a href={items.link}>{items.name}</a></li>)
 
     return(
-        <div>
+        <div className="header">
             <nav>
-                <ul>
-                    <ul>{listItems}</ul>
-                </ul>
+                <ul>{listItems}</ul>
             </nav>
         </div>
     )
