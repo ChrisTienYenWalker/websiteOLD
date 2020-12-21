@@ -4,16 +4,16 @@ function header(){
 
     const items = [
         {
-            link: "#",
+            link: "#about",
             name: "About Me"
         },
         {           
              name: "Projects",
-            link: "#", 
+            link: "#projects", 
         },
         
         {
-            link: "#",
+            link: "#contacts",
             name: "Contacts"
         }
     ]
