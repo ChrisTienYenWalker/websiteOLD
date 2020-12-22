@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 import logo from "./images/Logo.png";
 import sky from "./images/sky.jpg";
+
+// aos is a animation libary
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css"; // also use css animations for styles
 // ..
+//time duration of animations
 AOS.init({
   duration: 1500,
 });
 
 // all animations are css or aos
 
+//title function displays title animation, name, and rotating text
 function Title() {
   return (
     <div>
+      {/* animation done in css */}
       <div className="title">
         <h1>I'm Chris Walker</h1>
       </div>
@@ -22,7 +27,10 @@ function Title() {
         data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
       >
-        {/* creating a box and changing letters through react*/}
+        {/*
+         creating a box and changing letters through react   
+        animations done with css
+        */}
         <span class="rotatingText-span">High School Student</span>
         <span class="rotatingText-span">Programmer</span>
         <span class="rotatingText-span">Optimist</span>
@@ -31,6 +39,9 @@ function Title() {
   );
 }
 
+// about class
+// animations done with aos
+// pretty much box text
 function About() {
   return (
     <div className="about">
@@ -68,6 +79,7 @@ function About() {
   );
 }
 
+//quote is very similar to about just with some different css
 function Quote() {
   return (
     <div className="quote">
@@ -95,12 +107,14 @@ function Quote() {
   );
 }
 
+// projects is a display with buttons that allow you to change the text
 function Projects() {
-  //const [position, setPosition] = useState(0);
 
   const project = [
-    // template of project
 
+    // infinite amount of projects can be added 
+    // made of a image text title and link to the project
+    // might add more after ex. hover
     {
       //index 1
       title: "Title",
@@ -125,16 +139,30 @@ function Projects() {
       link: "https://google.com",
       image: logo,
     },
-    {
-      // empty container for if statement below so it doens't crash because the usestate compiles before the if statement
+    //insert new here
+
+      {
       title: "Title4",
       text:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       link: "https://google.com",
       image: logo,
     },
+
+        //insert new here
+
+        // template 
+        // {
+        //   title: "title",
+        //   text:
+        //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        //   link: "https://google.com",
+        //   image: logo,
+        // },
+
   ];
 
+  // setting index that determines what project is being shown
   const [index, setIndex] = useState(1);
 
   const [Title, setTitle] = useState(project[0].title);
@@ -142,6 +170,7 @@ function Projects() {
   const [Link, setLink] = useState(project[0].link);
   const [Image, setImage] = useState(project[0].image);
 
+  // how project is shown/the varibale template
   let projectDisplay = (
     <div className="projectContent">
       <div style={{ backgroundColor: "lightblue" }}>
@@ -156,50 +185,56 @@ function Projects() {
     </div>
   );
 
+  // right arrow increase 
+  // left arrow decrease
+  // the display
+
   return (
     <div className="projects" data-aos="fade-down">
       <h1>Projects</h1>
       <p>A little bit of text desc.</p>
+
       <button
         className="rightArrow"
+        // checks if at max then goes back to posy 1
         onClick={() => {
-          if (index == 4) {
+          if (index === project.length) {
             setIndex(1);
+            // project display must start one below index 
             setTitle(project[0].title);
             setText(project[0].text);
             setLink(project[0].link);
             setImage(project[0].image);
           } else {
+            // will increase if it is not at max
             setIndex(index + 1);
             setTitle(project[index].title);
-            setText(project[0].text);
-            setLink(project[0].link);
-            setImage(project[0].image);
+            setText(project[index].text);
+            setLink(project[index].link);
+            setImage(project[index].image);
           }
         }}
       >
         &rsaquo;
       </button>
-      <p>{index}</p>
       <button
         className="leftArrow"
+        // same as right arrow but with subtraction
         onClick={() => {
-          if (index == 1) {
-            setIndex(4);
-            setTitle(project[3].title);
-          setText(project[index].text);
-          setLink(project[index].link);
-          setImage(project[index].image);
+          if (index === 1) {
+            setIndex(project.length);
+            setTitle(project[project.length-1].title);
+            setText(project[project.length-1].text);
+            setLink(project[project.length-1].link);
+            setImage(project[project.length-1].image);
           } else {
             setIndex(index - 1);
-            setTitle(project[index-2].title);
-          setText(project[index-2].text);
-          setLink(project[index-2].link);
-          setImage(project[index-2].image);
+            setTitle(project[index - 2].title);
+            setText(project[index - 2].text);
+            setLink(project[index - 2].link);
+            setImage(project[index - 2].image);
           }
           console.log(index);
-
-          
         }}
       >
         &lsaquo;
@@ -214,6 +249,7 @@ function Extra() {
   return <div></div>;
 }
 
+// displaying body/ combining all functions and giving section names and ids 
 function body() {
   return (
     <div>
