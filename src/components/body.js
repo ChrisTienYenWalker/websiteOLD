@@ -1,5 +1,4 @@
-import React, { usestate } from "react";
-import TextTransition, { presets } from "react-text-transition";
+import React, { useState } from "react";
 import logo from "./images/Logo.png";
 import sky from "./images/sky.jpg";
 import AOS from "aos";
@@ -95,31 +94,65 @@ function Quote() {
     </div>
   );
 }
+
 function Projects() {
   //const [position, setPosition] = useState(0);
 
   const project = [
     // template of project
+
     {
-      index: 0,
+      //index 1
       title: "Title",
       text:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link: "google.co.uk/",
-      image: logo
+      link: "https://google.com",
+      image: logo,
+    },
+    {
+      // index 2
+      title: "Title2",
+      text:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link: "https://google.com",
+      image: logo,
+    },
+    {
+      // index 2
+      title: "Title3",
+      text:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link: "https://google.com",
+      image: logo,
+    },
+    {
+      // empty container for if statement below so it doens't crash because the usestate compiles before the if statement
+      title: "Title4",
+      text:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link: "https://google.com",
+      image: logo,
     },
   ];
 
-  let projectDisplay = (
-    <div className="projectContent" >
-      <div style={{ backgroundColor: "lightblue" }}>
-        <h1>{project[0].title}</h1>
-        <img src={project[0].image}></img>
+  const [index, setIndex] = useState(1);
 
-        <p>{project[0].text}</p>
-        <a href={project[0].link}> {project[0].link}</a>
+  const [Title, setTitle] = useState(project[0].title);
+  const [Text, setText] = useState(project[0].text);
+  const [Link, setLink] = useState(project[0].link);
+  const [Image, setImage] = useState(project[0].image);
+
+  let projectDisplay = (
+    <div className="projectContent">
+      <div style={{ backgroundColor: "lightblue" }}>
+        <h1>{Title}</h1>
+        <img src={Image}></img>
+
+        <p>
+          {Text} <br></br>
+          <br></br>You can check it out at: <a href={Link}> {Link}</a>
+        </p>
       </div>
-      ;
     </div>
   );
 
@@ -127,9 +160,51 @@ function Projects() {
     <div className="projects" data-aos="fade-down">
       <h1>Projects</h1>
       <p>A little bit of text desc.</p>
-      <button className="rightArrow">&rsaquo;</button>
-      <button className="leftArrow">&lsaquo;</button>
-      <div>{projectDisplay}</div>
+      <button
+        className="rightArrow"
+        onClick={() => {
+          if (index == 4) {
+            setIndex(1);
+            setTitle(project[0].title);
+            setText(project[0].text);
+            setLink(project[0].link);
+            setImage(project[0].image);
+          } else {
+            setIndex(index + 1);
+            setTitle(project[index].title);
+            setText(project[0].text);
+            setLink(project[0].link);
+            setImage(project[0].image);
+          }
+        }}
+      >
+        &rsaquo;
+      </button>
+      <p>{index}</p>
+      <button
+        className="leftArrow"
+        onClick={() => {
+          if (index == 1) {
+            setIndex(4);
+            setTitle(project[3].title);
+          setText(project[index].text);
+          setLink(project[index].link);
+          setImage(project[index].image);
+          } else {
+            setIndex(index - 1);
+            setTitle(project[index-2].title);
+          setText(project[index-2].text);
+          setLink(project[index-2].link);
+          setImage(project[index-2].image);
+          }
+          console.log(index);
+
+          
+        }}
+      >
+        &lsaquo;
+      </button>
+      {projectDisplay}
     </div>
   );
 }
