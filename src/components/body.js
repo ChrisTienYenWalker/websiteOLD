@@ -191,49 +191,49 @@ function Projects() {
   // creating a box for each project 
   let projectDisplay = (
     <div>
-      <a href="https://google.com">
+      <a href={project[0].link}>
     <div data-aos="fade-right" className="projectContainer" style={{  marginTop: "8vh", left: "52vw" }}>
-      <img src={demo} width="100%" height="100%"></img>
+      <img src={project[0].image} width="100%" height="100%"></img>
       <div>
         <h3>{project[0].title}</h3>
-        {/* <p>{project[0].text}</p> */}
+        <p>{project[0].text}</p>
         <br></br>
         <a href={project[0].link}>Check out the project at {project[0].link}</a>
       </div>
     </div>
     </a>
     
-    <a href="https://google.com">
+    <a href={project[1].link}>
 
     <div data-aos="fade-left" className="projectContainer"  style={{ marginTop: "8vh", left: "22vw"}}>
-    <img src={demo} width="100%" height="100%"></img>
+    <img src={project[1].image} width="100%" height="100%"></img>
    <div>
      <h3>{project[1].title}</h3>
-     {/* <p>{project[1].text}</p> */}
+     <p>{project[1].text}</p>
      <br></br>
      <a href={project[1].link}>Check out the project at {project[1].link}</a>
     </div>
    </div>
     </a>
 
-   <a href="https://google.com">
+   <a href={project[2].link}>
     <div data-aos="fade-left" className="projectContainer"  style={{  marginTop: "55vh", left: "52vw"}}>
-      <img src={demo} width="100%" height="100%"></img>
+      <img src={project[2].image} width="100%" height="100%"></img>
    <div>
    <h3>{project[2].title}</h3>
-     {/* <p>{project[2].text}</p> */}
+     <p>{project[2].text}</p>
      <br></br>
      <a href={project[2].link}>Check out the project at {project[2].link}</a>
    </div>
   </div>
   </a>
  
-  <a href="https://google.com">
+  <a href={project[3].link}>
     <div data-aos="fade-right" className="projectContainer"  style={{  marginTop: "55vh", left: "22vw"}}>
-      <img src={demo} width="100%" height="100%"></img>
+      <img src={project[3].image} width="100%" height="100%"></img>
    <div>
    <h3>{project[3].title}</h3>
-     {/* <p>{project[2].text}</p> */}
+     <p>{project[3].text}</p>
      <br></br>
      <a href={project[3].link}>Check out the project at {project[3].link}</a>
    </div>
