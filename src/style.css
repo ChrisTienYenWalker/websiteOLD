@@ -137,21 +137,21 @@ backimg -100
     margin-top: 25vh;
   }
   80% {
-    left: 0vw;
+    left: 10vw;
     font-size: 0.5vmin;
-    font-size: 3vmax;
+    font-size: 4vmax;
     margin-top: 30vh;
   }
   90% {
-    left: 0vw;
+    left: 10vw;
     font-size: 0.5vmin;
-    font-size: 3vmax;
+    font-size: 4vmax;
     margin-top: 45vh;
   }
   100% {
-    left: 0vw;
+    left: 10vw;
     font-size: 0.5vmin;
-    font-size: 3vmax;
+    font-size: 4vmax;
     margin-top: 30vh;
   }
 }
