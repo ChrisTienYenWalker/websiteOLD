@@ -10,7 +10,7 @@ function header(){
         //about and project id are in body
         {
             link: "#about", // link is being called by id placed in html tags and when pressed they go to the div
-            name: "About Me"
+            name: "Profile"
         },
         {           
              name: "Projects",

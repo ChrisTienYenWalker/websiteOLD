@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import logo from "./images/Logo.png";
-import sky from "./images/sky.jpg";
+import sky from "./images/background.bmp";
+// image from https://mymodernmet.com/capturing-gorgeous-sky-colors/
 import demo from "./images/demoImage.jpg";
+import personalPhoto from './images/Me.jpg'
 
 // aos is a animation libary
 import AOS from "aos";
@@ -9,7 +11,7 @@ import "aos/dist/aos.css"; // also use css animations for styles
 // ..
 //time duration of animations
 AOS.init({
-  duration: 1500,
+  duration: 500,
 });
 
 // all animations are css or aos
@@ -17,9 +19,9 @@ AOS.init({
 //title function displays title animation, name, and rotating text
 function Title() {
   return (
-    <div>
+    <div className="title">
       {/* animation done in css */}
-      <div className="title">
+      <div >
         <h1>I'm Chris Walker</h1>
       </div>
 
@@ -46,12 +48,20 @@ function Title() {
 function About() {
   return (
     <div className="about">
+      <h1 data-aos="fade-down" class="font-effect-emboss">My Profile</h1>
+      <hr></hr>
       <img
         data-aos="fade-up-left"
         data-aos-easing="ease-in-sine"
-        src={logo}
+        src={personalPhoto}
       ></img>
       <div data-aos="fade-up-right" data-aos-easing="ease-in-sine">
+        <h2>Details</h2>
+        <p>Name: Chris Walker</p>
+        <p>Nationality: Canadian</p>
+        <p>Status: Student</p>
+        <p>Favourite Food: BBQ Pork Bun</p>
+        <hr></hr>
         <h2>About Me</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -64,17 +74,7 @@ function About() {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+
       </div>
     </div>
   );
@@ -112,6 +112,7 @@ function About() {
 function Goals() {
   return (
     <div className="quote">
+      
       <h3 data-aos="fade-down" data-aos-duration="1000">
         My Goals
       </h3>
@@ -187,10 +188,11 @@ function Projects() {
   ];
 
   // how project is shown/the varibale template
+  // creating a box for each project 
   let projectDisplay = (
     <div>
       <a href="https://google.com">
-    <div className="projectContainer" style={{  marginTop: "10vh", left: "52vw" }}>
+    <div data-aos="fade-right" className="projectContainer" style={{  marginTop: "8vh", left: "52vw" }}>
       <img src={demo} width="100%" height="100%"></img>
       <div>
         <h3>{project[0].title}</h3>
@@ -203,7 +205,7 @@ function Projects() {
     
     <a href="https://google.com">
 
-    <div className="projectContainer"  style={{ marginTop: "10vh"}}>
+    <div data-aos="fade-left" className="projectContainer"  style={{ marginTop: "8vh", left: "22vw"}}>
     <img src={demo} width="100%" height="100%"></img>
    <div>
      <h3>{project[1].title}</h3>
@@ -215,7 +217,7 @@ function Projects() {
     </a>
 
    <a href="https://google.com">
-    <div className="projectContainer"  style={{  marginTop: "54vh", left: "-16vw"}}>
+    <div data-aos="fade-left" className="projectContainer"  style={{  marginTop: "55vh", left: "52vw"}}>
       <img src={demo} width="100%" height="100%"></img>
    <div>
    <h3>{project[2].title}</h3>
@@ -227,7 +229,7 @@ function Projects() {
   </a>
  
   <a href="https://google.com">
-    <div className="projectContainer"  style={{  marginTop: "54vh", left: "3 vw"}}>
+    <div data-aos="fade-right" className="projectContainer"  style={{  marginTop: "55vh", left: "22vw"}}>
       <img src={demo} width="100%" height="100%"></img>
    <div>
    <h3>{project[3].title}</h3>
@@ -240,21 +242,12 @@ function Projects() {
    </div>
   );
 
-  //   
-
-
-
-  //  <div style={{backgroundImage: project[3].image, marginTop: "54vh",}}>
-  //  <h3>{project[3].title}</h3>
-  //    {/* <p>{project[3].text}</p> */}
-  //    <br></br>
-  //    <a href={project[3].link}>Check out the project at {project[3].link}</a>
-  //  </div>
 
   return (
-    <div className="projects" data-aos="fade-down">
+    <div className="projects" data-aos="fade-up">
       <h1>Projects</h1>
       <h2>A little bit of text desc.</h2>
+      <hr></hr>
       <div>{projectDisplay}</div>
 
     </div>
@@ -270,8 +263,8 @@ function Extra() {
 function body() {
   return (
     <div>
-      {/* <div className="titleImg">
-        <img src={sky}></img>
+      <div className="titleImg">
+        <img src={sky} ></img>
       </div>
       <Title></Title>
       <div>
@@ -282,14 +275,14 @@ function body() {
 
         <section className="section-two">
           <Goals></Goals>
-        </section> */}
+        </section> 
 
       <section className="section-three" id="projects">
         <Projects></Projects>
       </section>
       {/*    <Extra></Extra> */}
     </div>
-    // </div>
+    </div>
   );
 }
 
