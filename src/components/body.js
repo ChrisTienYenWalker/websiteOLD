@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import logo from "./images/Logo.png";
 import sky from "./images/background.bmp";
 // image from https://mymodernmet.com/capturing-gorgeous-sky-colors/
-import demo from "./images/demoImage.jpg";
+import linear from './images/linear.bmp';
+import game from './images/game.png';
+import grade from './images/grade11.bmp';
 import personalPhoto from './images/Me.jpg'
+import med from './images/med.bmp';
 
 // aos is a animation libary
 import AOS from "aos";
@@ -143,36 +145,37 @@ function Projects() {
     // might add more after ex. hover
     {
       //index 1
-      title: "Title",
+      title: "Linear Calculator",
       text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link: "https://google.com",
-      image: demo,
+        "Solves linear line equations to help verify awnsers",
+      link: "https://github.com/ChrisTeinYenWalker/linear-calculator",
+      image: linear,
     },
     {
       // index 2
-      title: "Title2",
+      title: "Kinaxis Hackathon Game",
       text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link: "https://google.com",
-      image: logo,
+        "A 2D maze game based on the principles of mental health",
+      link: "https://github.com/A1igator/LTAMH",
+      wenlink: "https://a1igator.github.io/LTAMH/",
+      image: game,
     },
     {
       // index 2
-      title: "Title3",
+      title: "Grade 11 CS projects",
       text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link: "https://google.com",
-      image: logo,
+        "A bunch of grade 11 computer science projects written in C++",
+      link: "https://github.com/ChrisTeinYenWalker/Grade11cs",
+      image: grade,
     },
     //insert new here
 
     {
-      title: "Title4",
+      title: "Mediation Demo App",
       text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link: "https://google.com",
-      image: logo,
+        "A app/website that allows you to track and tells you when to take medications, done for uottawa hackathon",
+      link: "https://github.com/ChrisTeinYenWalker/uottahack2020-webapp",
+      image: med,
     },
 
     //insert new here
@@ -198,7 +201,7 @@ function Projects() {
         <h3>{project[0].title}</h3>
         <p>{project[0].text}</p>
         <br></br>
-        <a href={project[0].link}>Check out the project at {project[0].link}</a>
+        <a href={project[0].link}>Check out the project at: {project[0].link}</a>
       </div>
     </div>
     </a>
@@ -211,7 +214,9 @@ function Projects() {
      <h3>{project[1].title}</h3>
      <p>{project[1].text}</p>
      <br></br>
-     <a href={project[1].link}>Check out the project at {project[1].link}</a>
+     <a href={project[1].link}>Check out the project at: {project[1].link}</a>
+     <br></br><br></br>
+     <a href={project[1].wenlink}> You can try it out at: {project[1].link}</a>
     </div>
    </div>
     </a>
@@ -223,7 +228,7 @@ function Projects() {
    <h3>{project[2].title}</h3>
      <p>{project[2].text}</p>
      <br></br>
-     <a href={project[2].link}>Check out the project at {project[2].link}</a>
+     <a href={project[2].link}>Check out the project at: {project[2].link}</a>
    </div>
   </div>
   </a>
@@ -235,7 +240,7 @@ function Projects() {
    <h3>{project[3].title}</h3>
      <p>{project[3].text}</p>
      <br></br>
-     <a href={project[3].link}>Check out the project at {project[3].link}</a>
+     <a href={project[3].link}>Check out the project at: {project[3].link}</a>
    </div>
   </div>
   </a>
@@ -246,7 +251,7 @@ function Projects() {
   return (
     <div className="projects" data-aos="fade-up">
       <h1>Projects</h1>
-      <h2>A little bit of text desc.</h2>
+      <h2>"Tell me and I forget. Teach me and I remember. Involve me and I learn." -Benjamin Franklin</h2>
       <hr></hr>
       <div>{projectDisplay}</div>
 
