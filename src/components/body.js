@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import sky from "./images/background.bmp";
 // image from https://mymodernmet.com/capturing-gorgeous-sky-colors/
-import linear from './images/linear.bmp';
-import game from './images/game.png';
-import grade from './images/grade11.bmp';
-import personalPhoto from './images/Me.jpg'
-import med from './images/med.bmp';
+import linear from "./images/linear.bmp";
+import game from "./images/game.png";
+import grade from "./images/grade11.bmp";
+import personalPhoto from "./images/Me.jpg";
+import med from "./images/med.bmp";
 
 // aos is a animation libary
 import AOS from "aos";
@@ -23,7 +23,7 @@ function Title() {
   return (
     <div className="title">
       {/* animation done in css */}
-      <div >
+      <div>
         <h1>I'm Chris Walker</h1>
       </div>
 
@@ -50,7 +50,9 @@ function Title() {
 function About() {
   return (
     <div className="about">
-      <h1 data-aos="fade-down" class="font-effect-emboss">My Profile</h1>
+      <h1 data-aos="fade-down" class="font-effect-emboss">
+        My Profile
+      </h1>
       <hr></hr>
       <img
         data-aos="fade-up-left"
@@ -66,17 +68,12 @@ function About() {
         <hr></hr>
         <h2>About Me</h2>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+           Hi, my name is Chris Walker. I am a high school student who enjoys
+          learning and understanding the world. I love spending time coding,
+          playing sports, playing video games, spending time with my family and
+          friends. I am probably questioning reality, relaxing, or improving
+          myself. I am striving to go to a universiy in Canada for Computer Science and then help the lives of others through code.
         </p>
-
       </div>
     </div>
   );
@@ -114,7 +111,6 @@ function About() {
 function Goals() {
   return (
     <div className="quote">
-      
       <h3 data-aos="fade-down" data-aos-duration="1000">
         My Goals
       </h3>
@@ -146,16 +142,14 @@ function Projects() {
     {
       //index 1
       title: "Linear Calculator",
-      text:
-        "Solves linear line equations to help verify awnsers",
+      text: "Solves linear line equations to help verify awnsers",
       link: "https://github.com/ChrisTeinYenWalker/linear-calculator",
       image: linear,
     },
     {
       // index 2
       title: "Kinaxis Hackathon Game",
-      text:
-        "A 2D maze game based on the principles of mental health",
+      text: "A 2D maze game based on the principles of mental health",
       link: "https://github.com/A1igator/LTAMH",
       wenlink: "https://a1igator.github.io/LTAMH/",
       image: game,
@@ -163,8 +157,7 @@ function Projects() {
     {
       // index 2
       title: "Grade 11 CS projects",
-      text:
-        "A bunch of grade 11 computer science projects written in C++",
+      text: "A bunch of grade 11 computer science projects written in C++",
       link: "https://github.com/ChrisTeinYenWalker/Grade11cs",
       image: grade,
     },
@@ -191,70 +184,98 @@ function Projects() {
   ];
 
   // how project is shown/the varibale template
-  // creating a box for each project 
+  // creating a box for each project
   let projectDisplay = (
     <div>
       <a href={project[0].link}>
-    <div data-aos="fade-left" className="projectContainer" style={{  marginTop: "8vh", left: "52vw" }}>
-      <img src={project[0].image} width="100%" height="100%"></img>
-      <div>
-        <h3>{project[0].title}</h3>
-        <p>{project[0].text}</p>
-        <br></br>
-        <a href={project[0].link}>Check out the project at: {project[0].link}</a>
-      </div>
-    </div>
-    </a>
-    
-    <a href={project[1].link}>
+        <div
+          data-aos="fade-left"
+          className="projectContainer"
+          style={{ marginTop: "8vh", left: "52vw" }}
+        >
+          <img src={project[0].image} width="100%" height="100%"></img>
+          <div>
+            <h3>{project[0].title}</h3>
+            <p>{project[0].text}</p>
+            <br></br>
+            <a href={project[0].link}>
+              Check out the project at: {project[0].link}
+            </a>
+          </div>
+        </div>
+      </a>
 
-    <div data-aos="fade-right" className="projectContainer"  style={{ marginTop: "8vh", left: "22vw"}}>
-    <img src={project[1].image} width="100%" height="100%"></img>
-   <div>
-     <h3>{project[1].title}</h3>
-     <p>{project[1].text}</p>
-     <br></br>
-     <a href={project[1].link}>Check out the project at: {project[1].link}</a>
-     <br></br><br></br>
-     <a href={project[1].wenlink}> You can try it out at: {project[1].link}</a>
-    </div>
-   </div>
-    </a>
+      <a href={project[1].link}>
+        <div
+          data-aos="fade-right"
+          className="projectContainer"
+          style={{ marginTop: "8vh", left: "22vw" }}
+        >
+          <img src={project[1].image} width="100%" height="100%"></img>
+          <div>
+            <h3>{project[1].title}</h3>
+            <p>{project[1].text}</p>
+            <br></br>
+            <a href={project[1].link}>
+              Check out the project at: {project[1].link}
+            </a>
+            <br></br>
+            <br></br>
+            <a href={project[1].wenlink}>
+              {" "}
+              You can try it out at: {project[1].link}
+            </a>
+          </div>
+        </div>
+      </a>
 
-   <a href={project[2].link}>
-    <div data-aos="fade-left" className="projectContainer"  style={{  marginTop: "55vh", left: "52vw"}}>
-      <img src={project[2].image} width="100%" height="100%"></img>
-   <div>
-   <h3>{project[2].title}</h3>
-     <p>{project[2].text}</p>
-     <br></br>
-     <a href={project[2].link}>Check out the project at: {project[2].link}</a>
-   </div>
-  </div>
-  </a>
- 
-  <a href={project[3].link}>
-    <div data-aos="fade-right" className="projectContainer"  style={{  marginTop: "55vh", left: "22vw"}}>
-      <img src={project[3].image} width="100%" height="100%"></img>
-   <div>
-   <h3>{project[3].title}</h3>
-     <p>{project[3].text}</p>
-     <br></br>
-     <a href={project[3].link}>Check out the project at: {project[3].link}</a>
-   </div>
-  </div>
-  </a>
-   </div>
+      <a href={project[2].link}>
+        <div
+          data-aos="fade-left"
+          className="projectContainer"
+          style={{ marginTop: "55vh", left: "52vw" }}
+        >
+          <img src={project[2].image} width="100%" height="100%"></img>
+          <div>
+            <h3>{project[2].title}</h3>
+            <p>{project[2].text}</p>
+            <br></br>
+            <a href={project[2].link}>
+              Check out the project at: {project[2].link}
+            </a>
+          </div>
+        </div>
+      </a>
+
+      <a href={project[3].link}>
+        <div
+          data-aos="fade-right"
+          className="projectContainer"
+          style={{ marginTop: "55vh", left: "22vw" }}
+        >
+          <img src={project[3].image} width="100%" height="100%"></img>
+          <div>
+            <h3>{project[3].title}</h3>
+            <p>{project[3].text}</p>
+            <br></br>
+            <a href={project[3].link}>
+              Check out the project at: {project[3].link}
+            </a>
+          </div>
+        </div>
+      </a>
+    </div>
   );
-
 
   return (
     <div className="projects" data-aos="fade-up">
       <h1>Projects</h1>
-      <h2>"Tell me and I forget. Teach me and I remember. Involve me and I learn." -Benjamin Franklin</h2>
+      <h2>
+        "Tell me and I forget. Teach me and I remember. Involve me and I learn."
+        -Benjamin Franklin
+      </h2>
       <hr></hr>
       <div>{projectDisplay}</div>
-
     </div>
   );
 }
@@ -269,7 +290,7 @@ function body() {
   return (
     <div>
       <div className="titleImg">
-        <img src={sky} ></img>
+        <img src={sky}></img>
       </div>
       <Title></Title>
       <div>
@@ -280,13 +301,13 @@ function body() {
 
         <section className="section-two">
           <Goals></Goals>
-        </section> 
+        </section>
 
-      <section className="section-three" id="projects">
-        <Projects></Projects>
-      </section>
-      {/*    <Extra></Extra> */}
-    </div>
+        <section className="section-three" id="projects">
+          <Projects></Projects>
+        </section>
+        {/*    <Extra></Extra> */}
+      </div>
     </div>
   );
 }
