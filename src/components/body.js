@@ -195,7 +195,7 @@ function Projects() {
   let projectDisplay = (
     <div>
       <a href={project[0].link}>
-    <div data-aos="fade-right" className="projectContainer" style={{  marginTop: "8vh", left: "52vw" }}>
+    <div data-aos="fade-left" className="projectContainer" style={{  marginTop: "8vh", left: "52vw" }}>
       <img src={project[0].image} width="100%" height="100%"></img>
       <div>
         <h3>{project[0].title}</h3>
@@ -208,7 +208,7 @@ function Projects() {
     
     <a href={project[1].link}>
 
-    <div data-aos="fade-left" className="projectContainer"  style={{ marginTop: "8vh", left: "22vw"}}>
+    <div data-aos="fade-right" className="projectContainer"  style={{ marginTop: "8vh", left: "22vw"}}>
     <img src={project[1].image} width="100%" height="100%"></img>
    <div>
      <h3>{project[1].title}</h3>
