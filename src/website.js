@@ -8,7 +8,7 @@ import "./style.css";
 function website() {
   return (
     <div>
-      <Header></Header>
+      {/* <Header></Header> */}
       <Body></Body>
       <Footer></Footer>
      </div>
