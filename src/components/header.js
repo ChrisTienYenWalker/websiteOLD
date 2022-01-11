@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './header.css'
     //creating sections/links on a nav bar
 
 function header(){
@@ -9,24 +9,34 @@ function header(){
     const sections = [
         //about and project id are in body
         {
-            link: "#about", // link is being called by id placed in html tags and when pressed they go to the div
-            name: "Profile"
+            link: "./about", // link is being called by id placed in html tags and when pressed they go to the div
+            name: "About",
+            id: 1
         },
         {           
              name: "Projects",
-            link: "#projects", 
+            link: "./projects", 
+            id: 2
+        },
+        { 
+            //contact id is in footer
+            link: "./work",
+            name: "Work",
+            id: 3
         },
         
         { 
             //contact id is in footer
-            link: "#contacts",
-            name: "Contacts"
-        }
+            link: "./",
+            name: "Highlights",
+            id: 4
+        },
+        
     ]
 
     // maping all items in sections and creating html elements for each link 
     //turning the section container into multiple list elements 
-    const sectionsList = sections.map((sections) => <li><a href={sections.link}>{sections.name}</a></li>)
+    const sectionsList = sections.map((sections) => <li key={sections.id}><a href={sections.link}>{sections.name}</a></li>)
 
     return(
         // adding css
