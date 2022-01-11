@@ -1,17 +1,22 @@
 {
   "files": {
     "main.css": "/website/static/css/main.4443fd84.css",
-    "main.js": "/website/static/js/main.a1119705.js",
+    "main.js": "/website/static/js/main.5a010fb5.js",
     "static/media/Vex.jpg": "/website/static/media/Vex.ff12618c99fac7f3cb52.jpg",
     "static/media/CU.jpg": "/website/static/media/CU.70df637871392439c89d.jpg",
+    "static/media/grade11.png": "/website/static/media/grade11.2290453a56a5f54efd58.png",
+    "static/media/G11CE.png": "/website/static/media/G11CE.18ad42796d2d02302d56.png",
     "static/media/Digitera.png": "/website/static/media/Digitera.3594c58e99519753a038.png",
+    "static/media/Kinaxis.png": "/website/static/media/Kinaxis.be486a90804429a0650b.png",
+    "static/media/uottawa.jpg": "/website/static/media/uottawa.c54a7b8ddb4643212590.jpg",
     "static/media/CityOfOttawa.jpeg": "/website/static/media/CityOfOttawa.c271e85409883336e0c3.jpeg",
+    "static/media/levels.png": "/website/static/media/levels.1efeedabcc15ef4eb7f7.png",
     "index.html": "/website/index.html",
     "main.4443fd84.css.map": "/website/static/css/main.4443fd84.css.map",
-    "main.a1119705.js.map": "/website/static/js/main.a1119705.js.map"
+    "main.5a010fb5.js.map": "/website/static/js/main.5a010fb5.js.map"
   },
   "entrypoints": [
     "static/css/main.4443fd84.css",
-    "static/js/main.a1119705.js"
+    "static/js/main.5a010fb5.js"
   ]
 }
