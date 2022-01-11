@@ -2,8 +2,15 @@ import React from "react";
 import './body.css';
 import City from './Images/CityOfOttawa.jpeg'
 import Digitera from './Images/Digitera.png'
+
 import Vex from './Images/Vex.jpg';
 import cu from './Images/CU.jpg';
+import ce from './Images/G11CE.png';
+import cs from './Images/grade11.png';
+import Kinaxis from './Images/Kinaxis.png';
+import linear from './Images/linear.png';
+import uottawa from './Images/uottawa.jpg';
+import levels from './Images/levels.png';
 // aos is a animation libary
 import AOS from "aos";
 import "aos/dist/aos.css"; // also use css animations for styles
@@ -104,13 +111,67 @@ function Project(){
         },
     
         {
+            title: 'UottaHack3',
+            text: 'A health website and app that records and reminds you to take your medicine',
+            image: uottawa,
+            link: 'Check the code out on Github', 
+            linkText: 'https://github.com/ChrisTeinYenWalker/uottahack2020-webapp', 
+            id: 1
+        },
+        
+        {
             title: 'Carleton Hackathon',
             text: 'A social media for students to get help and communicate about school related topics',
             image: cu,
             link: 'Check the code out on Github', 
             linkText: 'https://github.com/A1igator/cuhacking2020-frontend', 
-            id: 1
+            id: 2
         },
+
+        {
+            title: 'Grade 11 Engineering projects',
+            text: 'A class where I built various computer engineering projects including: a binary bit calculator, traffic light system, number guessing game and more',
+            image: ce,
+            link: '', 
+            linkText: '', 
+            id: 3
+        },
+
+        {
+            title: 'Grade 11 CS projects',
+            text: 'A grade 11 class where I built a games, console applications and solved algorithmic problems',
+            image: cs,
+            link: 'Check the code out on Github', 
+            linkText: 'https://github.com/ChrisTeinYenWalker/Grade11cs', 
+            id: 4
+        },
+
+        {
+            title: 'Average level Calculator',
+            text: 'A calculator to help predict your percentage grade from all your tests and assignments using the Ontairo 4 level',
+            image: levels,
+            link: 'Check the code out on Github', 
+            linkText: 'https://github.com/ChrisTeinYenWalker/average-Levels.github.io', 
+            id: 5
+        },
+
+        {
+            title: 'Kinaxis Hackathon',
+            text: 'A mental health 2D maze game with a 3D level',
+            image: Kinaxis,
+            link: 'Check the code out on Github', 
+            linkText: 'https://github.com/A1igator/LTAMH', 
+            id: 6
+        },
+
+        {
+            title: 'Linear Calculator',
+            text: 'Solve linear line mathematics problems',
+            image: linear,
+            link: 'Check the code out on Github', 
+            linkText: 'https://github.com/ChrisTeinYenWalker/linear-calculator', 
+            id: 7
+        },              
     
     ];
     let projectList = list.map((list) => 
